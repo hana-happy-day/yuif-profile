@@ -1,0 +1,2420 @@
+@charset "utf-8";
+
+/* ==================== 共通の設定 ==================== */
+html {
+  /* フォントサイズの基準値を設定 */
+  font-size: 100%;
+}
+
+body {
+  /* 基本のフォントサイズを設定 */
+  font-size: 1.4em;
+  /* 背景色を指定 */
+  background-color: #e2d8da;
+  /* 文字色を指定 */
+  color: #181914;
+  /* bodyの最大幅を設定し、コンテンツが広がりすぎないようにする */
+  max-width: 1200px;
+  /* ページ全体を中央に配置 */
+  margin: 0 auto;
+  padding: 20px;
+  /* bodyの幅を100%に設定 */
+  width: 100%;
+}
+
+body li {
+  /* リストのマーカー（・など）を非表示にする */
+  list-style-type: none;
+}
+
+body a {
+  /* リンクの下線を非表示にする */
+  text-decoration: none;
+  /* リンクの色を指定 */
+  color: #181914;
+}
+
+* {
+  /* 全ての要素のマージンとパディングをリセット */
+  margin: 0;
+  padding: 0;
+  /* paddingとborderを幅と高さに含める設定 */
+  box-sizing: border-box;
+}
+
+a:hover {
+  /* ホバー時に要素を少し透過させる */
+  opacity: 0.7;
+}
+
+/* 区切り線 */
+hr {
+  /* 点線のボーダーを指定 */
+  border: 1px dotted #8e7264;
+  /* 上下マージンと中央配置 */
+  margin: 150px auto;
+}
+
+/* フォント設定 */
+.cardo-regular-italic {
+  /* 名前の英字にフォントを適用 */
+  font-family: "Cardo", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.sacramento-regular {
+  /* 筆記体の英字にフォントを適用 */
+  font-family: "Sacramento", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+section {
+  /* 各セクションの下に余白を設定 */
+  margin-bottom: 100px;
+}
+
+/* ==================== ナビの設定 ==================== */
+#header {
+  /* ヘッダーの最大幅を設定し、中央に配置 */
+  max-width: 1000px;
+  margin: 0 auto;
+}
+#header img {
+  display: block;
+  margin: 20px auto;
+  height: 100px;
+  width: auto;
+}
+header nav ul {
+  /* ナビゲーションメニューを横並びにする */
+  display: flex;
+  /* 要素を均等に配置 */
+  justify-content: space-between;
+  /* 上下に余白を設定 */
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+/* ナビの設定　↑ */
+/* ==================== パンくずリスト　↓ ==================== */
+div ol {
+  /* リストを横並びにする */
+  display: flex;
+  /* 左右のパディングを設定 */
+  padding: 0 5px;
+  /* 左側にマージンを設定 */
+  margin-left: 20px;
+  /* 要素を垂直方向の中央に揃える */
+  align-items: center;
+}
+
+div ol a {
+  /* リンクのフォントサイズを指定 */
+  font-size: 17px;
+}
+
+.path {
+  /* 左側にマージンを設定 */
+  margin-left: 10px;
+  /* 文字色を指定 */
+  color: #8e7264;
+  /* フォントサイズを指定 */
+  font-size: 18px;
+}
+
+/* パンくずリスト　↑ */
+
+/* ==================== フッター　↓ ==================== */
+footer p {
+  /* テキストを中央揃えにする */
+  text-align: center;
+  /* フォントサイズを指定 */
+  font-size: 14px;
+  /* 行の高さを設定 */
+  line-height: 1.5;
+  /* 背景色を指定 */
+  background-color: #8e7264;
+}
+
+footer {
+  /* 上下マージンと中央配置 */
+  margin: 50px auto;
+}
+
+/* ==================== トップへ戻るボタン　↓ ==================== */
+#page-top {
+  /* 要素を画面の特定の場所に固定する */
+  position: fixed;
+  /* 右からの距離 */
+  right: 40px;
+  /* 下からの距離 */
+  bottom: 50px;
+  /* 高さを設定 */
+  height: 50px;
+  /* リンクの下線を非表示 */
+  text-decoration: none;
+  /* 文字を太字にする */
+  font-weight: bold;
+  /* 要素を90度回転させる */
+  transform: rotate(90deg);
+  /* フォントサイズを小さくする */
+  font-size: 70%;
+  /* 行の高さを設定 */
+  line-height: 1.5rem;
+  /* 文字色を指定 */
+  color: #555168;
+  /* 左側にパディングを設定 */
+  padding: 0 0 0 35px;
+  /* 上に実線のボーダーを設定 */
+  border-top: solid 1px;
+}
+
+#page-top::before {
+  /* 疑似要素を作成 */
+  content: "";
+  /* ブロックレベル要素として表示 */
+  display: block;
+  /* 親要素を基準に位置を調整 */
+  position: absolute;
+  /* 上からの位置を調整 */
+  top: -1px;
+  /* 左からの位置を調整 */
+  left: 0px;
+  /* 幅を指定 */
+  width: 15px;
+  /* 上に実線のボーダーを設定 */
+  border-top: solid 1px;
+  /* 35度回転させる */
+  transform: rotate(35deg);
+  /* 回転の中心を左上にする */
+  transform-origin: left top;
+}
+
+/***トップへ戻るボタンここまで***/
+
+/* フッター　↑ */
+
+/* ==================== 共通部分のレスポンシブ対応　↓ ==================== */
+/* 画面幅が640px以下の場合に適用されるスタイル */
+@media screen and (max-width: 640px) {
+
+  img {
+    /* 画像の最大幅を親要素に合わせる */
+    max-width: 100%;
+    /* 縦横比を維持 */
+    height: auto;
+    /* ブロックレベル要素として表示 */
+    display: block;
+  }
+
+  html,
+  body {
+    /* マージンとパディングをリセット */
+    margin: 0;
+    padding: 0;
+    /* 幅を100%に設定 */
+    width: 100%;
+    /* 横方向のはみ出しを隠す */
+    overflow-x: hidden;
+  }
+
+  main {
+    /* 横方向のはみ出しを隠す */
+    overflow-x: hidden;
+  }
+
+  footer {
+    /* 最大幅を設定し、中央に配置 */
+    max-width: 80%;
+    margin: 50px auto;
+    /* パディングを設定 */
+    padding: 10px;
+    /* paddingとborderを幅に含める設定 */
+    box-sizing: border-box;
+  }
+
+  footer p {
+    /* 最大幅を設定 */
+    max-width: 100%;
+    /* 左右のパディングを設定 */
+    padding: 0 5px;
+  }
+
+  .container {
+    /* 幅を100%に設定 */
+    width: 100%;
+    /* 最大幅を設定し、中央に配置 */
+    max-width: 1200px;
+    margin: 0 auto;
+    /* 左右のパディングを設定 */
+    padding: 0 10px;
+    /* paddingとborderを幅に含める設定 */
+    box-sizing: border-box;
+    /* 横方向のはみ出しを隠す */
+    overflow-x: hidden;
+  }
+
+  hr {
+    /* 幅を設定 */
+    width: 80%;
+  }
+
+  /* パンくずリスト　↓ */
+  div ol li {
+    /* 上にマージンを設定 */
+    margin-top: 50px;
+  }
+
+  /* ハンバーガーの3本線 */
+  /* 640px以下でハンバーガー表示＆ナビ切り替え */
+  #header .hamburger {
+    /* 幅と高さを設定 */
+    width: 50px;
+    height: 50px;
+    /* マウスカーソルをポインターにする */
+    cursor: pointer;
+    /* 要素を固定する */
+    position: fixed;
+    /* 上と右からの位置を設定 */
+    top: 5px;
+    right: 10px;
+    /* 重なり順を最前面にする */
+    z-index: 30;
+  }
+
+  #header .hamburger span {
+    /* 3本の線の幅と高さを設定 */
+    width: 30px;
+    height: 3px;
+    /* 背景色を指定 */
+    background: #555168;
+    /* インラインブロック要素として表示 */
+    display: inline-block;
+    /* 親要素を基準に位置を調整 */
+    position: absolute;
+    /* 左からの位置を設定 */
+    left: 10px;
+    /* 全てのプロパティの変化を滑らかにする */
+    transition: all 0.4s;
+  }
+
+  /* 三本線　↓ */
+  #header .hamburger span:nth-of-type(1) {
+    /* 1本目の線の位置 */
+    top: 16px;
+  }
+
+  #header .hamburger span:nth-of-type(2) {
+    /* 2本目の線の位置 */
+    top: 25px;
+  }
+
+  #header .hamburger span:nth-of-type(3) {
+    /* 3本目の線の位置 */
+    top: 34px;
+  }
+
+  /* 三本線　↑ */
+
+  /* 開いたときの表示　↓ */
+  #header .navi {
+    /* 幅と高さを設定 */
+    width: 50%;
+    height: 100vh;
+    /* 背景色を指定 */
+    background-color: #d1a7b0;
+    /* 要素を固定する */
+    position: fixed;
+    /* 上からの位置を設定 */
+    top: 0;
+    /* 右端から隠す */
+    right: -80%;
+    /* 重なり順をハンバーガーメニューの下にする */
+    z-index: 20;
+    /* 右プロパティの変化を滑らかにする */
+    transition: right 0.6s ease;
+    /* 要素を縦に並べる */
+    display: flex;
+    flex-direction: column;
+    /* 中央に揃える */
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* ナビがアクティブになったときのスタイル */
+  #header .navi.active {
+    /* 右から表示する */
+    right: 0;
+  }
+
+  #header .navi .menu {
+    /* 要素を縦に並べる */
+    display: flex;
+    flex-direction: column;
+    /* 中央に揃える */
+    align-items: center;
+    justify-content: center;
+    /* 高さを設定 */
+    height: 100vh;
+    /* 上下にパディングを設定 */
+    padding: 60px 0;
+  }
+
+  #header .navi .menu li {
+    /* 幅を100%に設定 */
+    width: 100%;
+    /* テキストを中央揃えにする */
+    text-align: center;
+    /* 上下にマージンを設定 */
+    margin: 10px 0;
+  }
+
+  #header .navi .menu li a {
+    /* 文字色を指定 */
+    color: #fff;
+    /* フォントサイズを指定 */
+    font-size: 18px;
+    /* リンクの下線を非表示にする */
+    text-decoration: none;
+    /* インラインブロック要素として表示 */
+    display: inline-block;
+    /* パディングを設定 */
+    padding: 10px 20px;
+    /* テキストを中央揃えにする */
+    text-align: center;
+  }
+
+  /* バツ　　↓ */
+  #header .hamburger.active span:nth-of-type(1) {
+    /* 1本目の線の位置を調整し、回転させる */
+    top: 24px;
+    transform: rotate(-45deg);
+  }
+
+  #header .hamburger.active span:nth-of-type(2) {
+    /* 2本目の線を非表示にする */
+    opacity: 0;
+  }
+
+  #header .hamburger.active span:nth-of-type(3) {
+    /* 3本目の線の位置を調整し、回転させる */
+    top: 24px;
+    transform: rotate(45deg);
+  }
+}
+
+/* 共通部分のレスポンシブ対応　↑ */
+
+/* ==================== index.html  ↓ ==================== */
+/* トップページ　↓ */
+#toppage {
+  /* 要素を横並びにする */
+  display: flex;
+  /* 上下マージンと中央配置 */
+  margin: 100px auto;
+  /* 要素を均等に配置 */
+  justify-content: space-around;
+  /* 要素を垂直方向の中央に揃える */
+  align-items: center;
+  /* 要素間の隙間を設定 */
+  gap: 10px;
+  /* 高さを設定 */
+  height: 500px;
+}
+
+#toppage img {
+  /* 幅を設定 */
+  width: 200px;
+  /* 縦横比を維持 */
+  height: auto;
+}
+
+#toppage h1 {
+  /* フォントサイズを設定 */
+  font-size: 80px;
+  /* 下マージンをリセット */
+  margin-bottom: 0;
+  /* 行の高さを設定 */
+  line-height: 1;
+}
+
+#toppage p {
+  /* フォントサイズを設定 */
+  font-size: 20px;
+  /* 上マージンを設定 */
+  margin-top: 5px;
+  /* テキストを中央揃えにする */
+  text-align: center;
+  /* 行の高さを設定 */
+  line-height: 0;
+}
+
+/* メニュー　↓ */
+#indexmenu ul {
+  /* 要素を横並びにする */
+  display: flex;
+  /* 中央に配置 */
+  justify-content: center;
+  /* 要素間の隙間を設定 */
+  gap: 100px;
+  /* 上下マージンを設定 */
+  margin: 50px 0 10px;
+}
+
+#indexmenu li a {
+  /* 点線のボーダーを設定 */
+  border: 1px dotted #181914;
+  /* パディングを設定 */
+  padding: 5px 20px;
+}
+
+#indexmenu a {
+  /* フォントサイズを設定 */
+  font-size: 20px;
+}
+
+/* メニュー　　↑ */
+/* トップページ　↑ */
+
+/* ==================== ポートフォリオ　↓ ==================== */
+#portfolio h2 {
+  /* フォントサイズを設定 */
+  font-size: 100px;
+  /* テキストを中央揃えにする */
+  text-align: center;
+  /* 下マージンをリセット */
+  margin-bottom: 0;
+  /* 行の高さを設定 */
+  line-height: 1;
+}
+
+#portfolio p {
+  /* フォントサイズを設定 */
+  font-size: 20px;
+  /* テキストを中央揃えにする */
+  text-align: center;
+  /* 上下マージンを設定 */
+  margin-top: 40px;
+  margin-bottom: 50px;
+  /* 行の高さを設定 */
+  line-height: 1;
+}
+
+#portfolio p:first-of-type {
+  /* フォントサイズを小さくする */
+  font-size: 16px;
+  /* テキストを中央揃えにする */
+  text-align: center;
+}
+
+.portfolio {
+  /* 高さを設定 */
+  height: 500px;
+  /* 要素を横並びにする */
+  display: flex;
+  /* 要素を均等に配置 */
+  justify-content: space-between;
+  /* 要素間の隙間を設定 */
+  gap: 40px;
+}
+
+.summary {
+  /* 要素を縦に並べる */
+  display: flex;
+  flex-direction: column;
+  /* 要素間の隙間を設定 */
+  gap: 5px;
+}
+
+.portcontent {
+  /* マージンをリセット */
+  margin-bottom: 0;
+  margin-top: 0;
+  /* パディングを設定 */
+  padding: 20px;
+  /* 角を丸くする */
+  border-radius: 8px;
+}
+
+.portcontent h3 {
+  /* テキストを中央揃えにする */
+  text-align: center;
+  /* フォントサイズを設定 */
+  font-size: 20px;
+  /* 文字を太字にする */
+  font-weight: bold;
+}
+
+#date {
+  /* テキストを中央揃えにする */
+  text-align: center;
+  /* フォントサイズを設定 */
+  font-size: 18px;
+}
+
+#message {
+  /* コンセプト文*/
+  /* フォントサイズを設定 */
+  font-size: 18px;
+  /* パディングをリセット */
+  padding: 0;
+  /* 行の高さを設定 */
+  line-height: 2;
+  /* テキストを左揃えにする */
+  text-align: left;
+  /* 幅を設定 */
+  width: 1100px;
+}
+
+/* ポートフォリオ　↑ */
+
+/* ==================== 未経験分野への挑戦　↓ ==================== */
+#wrapper h2 {
+  /* テキストを中央揃えにする */
+  text-align: center;
+  /* フォントサイズを設定 */
+  font-size: 24px;
+}
+
+#wrapper p {
+  /* テキストを左揃えにする */
+  text-align: left;
+  /* フォントサイズを設定 */
+  font-size: 18px;
+  /* 行の高さを設定 */
+  line-height: 2.5;
+}
+
+#wrapper {
+  /* 高さを設定 */
+  height: 500px;
+}
+
+/* ↑　未経験分野への挑戦 */
+/* index.html  ↑ */
+
+/* ==================== index.html のレスポンシブ対応 ↓ ==================== */
+@media screen and (max-width: 640px) {
+  .index {
+    /* 最大幅を設定し、中央に配置 */
+    max-width: 90%;
+    padding: 0 auto;
+    margin: 0 auto;
+  }
+
+  #toppage {
+    /* 要素を縦に並べる */
+    display: flex;
+    flex-direction: column;
+    /* 中央に揃える */
+    align-items: center;
+    /* 要素間の隙間を設定 */
+    gap: 10px;
+    /* 幅を設定 */
+    width: 90%;
+    /* paddingとborderを幅に含める設定 */
+    box-sizing: border-box;
+    /* 下マージンをリセット */
+    margin-bottom: 0;
+  }
+
+  #toppage img {
+    /* 幅と高さを設定 */
+    width: 80px;
+    height: auto;
+    /* 下マージンをリセット */
+    margin-bottom: 0;
+  }
+
+  #topmyphoto img {
+    /* ブロックレベル要素として表示 */
+    display: block;
+    /* 幅と高さを設定 */
+    width: 100px;
+    height: auto;
+    /* マージンを調整し、中央に配置 */
+    margin: -30px auto 0 auto;
+    /* パディングをリセット */
+    padding: 0;
+  }
+
+  #indexmenu ul {
+    /* 要素を縦に並べる */
+    display: flex;
+    flex-direction: column;
+    /* 要素間の隙間を設定 */
+    gap: 40px;
+  }
+
+  #indexmenu li {
+    /* 中央に配置 */
+    margin: 0 auto;
+  }
+
+  #indexmenu a {
+    /* フォントサイズを設定 */
+    font-size: 16px;
+    /* パディングを設定 */
+    padding: 5px;
+  }
+
+  #topmyphoto {
+    /* 下マージンを調整 */
+    margin-bottom: 50px;
+    /* 下パディングをリセット */
+    padding-bottom: 0;
+  }
+
+  hr {
+    /* 上下マージンと幅を調整 */
+    margin: 50px auto;
+    width: 80%;
+  }
+
+  section {
+    /* 上マージンを調整 */
+    margin-top: 10px;
+  }
+
+  .nameblock {
+    /* マージンとパディングをリセット */
+    margin: 0;
+    padding: 0;
+  }
+
+  #toppage h1 {
+    /* フォントサイズとマージンを調整 */
+    font-size: 20px;
+    margin: 0;
+  }
+
+  #toppage p {
+    /* フォントサイズとマージン、行の高さを調整 */
+    font-size: 12px;
+    margin: 0;
+    line-height: 1.2;
+  }
+}
+
+/* ポートフォリオ部分のレスポンシブ対応　↓ */
+@media screen and (max-width:640px) {
+  #portfolio {
+    /* 最大幅を設定 */
+    max-width: 90%;
+  }
+
+  #portfolio h2 {
+    /* フォントサイズと下マージンを調整 */
+    font-size: 42px;
+    margin-bottom: 0;
+  }
+
+  #portfolio #title {
+    /* フォントサイズと上マージンを調整 */
+    font-size: 15px;
+    margin-top: 5px;
+  }
+
+  #portfolio p:last-of-type {
+    /* フォントサイズ、最大幅、中央配置を調整 */
+    font-size: 12px;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .portcontent h3 {
+    /* フォントサイズを調整 */
+    font-size: 18px;
+  }
+
+  .portcontent p {
+    /* フォントサイズを調整 */
+    font-size: 12px;
+  }
+
+  #message {
+    /* 最大幅と中央配置を調整 */
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  /* 未経験分野への挑戦　レスポンシブ対応　↓ */
+  #wrapper {
+    /* マージンとパディング、高さを調整 */
+    margin: 20px auto;
+    padding: 10px;
+    height: auto;
+    max-width: 90%;
+  }
+
+  #wrapper h2 {
+    /* フォントサイズと下マージンを調整 */
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  #wrapper p {
+    /* 最大幅とフォントサイズを調整 */
+    max-width: 90%;
+    font-size: 16px;
+  }
+
+  /* 未経験分野への挑戦　レスポンシブ対応　↑ */
+}
+
+/* index.html のレスポンシブ対応 ↑ */
+
+/* ==================== about.html　↓ ==================== */
+#aboutme h1 {
+  /* テキストを中央揃えにする */
+  text-align: center;
+  /* 上下マージンを調整 */
+  margin: 100px auto 20px;
+  /* フォントサイズを設定 */
+  font-size: 100px;
+}
+
+#aboutimg {
+  /* 要素を横並びにする */
+  display: flex;
+  /* 要素間の隙間を設定 */
+  gap: 150px;
+  /* 要素を均等に配置 */
+  justify-content: space-around;
+  /* 要素を下揃えにする */
+  align-items: flex-end;
+  /* 親要素を基準に子要素を配置できるようにする */
+  position: relative;
+}
+
+#aboudog1 {
+  /* 幅を設定 */
+  width: 280px;
+  /* 縦横比を維持 */
+  height: auto;
+  /* 絶対位置で配置 */
+  position: absolute;
+  /* 下と左からの位置を設定 */
+  bottom: -240px;
+  left: 10px;
+}
+
+#aboudog2 {
+  /* 縦横比を維持 */
+  width: auto;
+  /* 高さを設定 */
+  height: 200px;
+  /* 絶対位置で配置 */
+  position: absolute;
+  /* 下と右からの位置を設定 */
+  bottom: -180px;
+  right: 30px;
+}
+
+/* Myフォトのサイズ共通　↓ */
+.myphoto {
+  /* 角を丸くする */
+  border-radius: 50%;
+  /* 白いボーダーを設定 */
+  border: 15px solid #fff;
+  /* 要素を上にずらす */
+  transform: translateY(-40%);
+  /* 重なり順を調整 */
+  z-index: 2;
+  /* 下マージンを調整 */
+  margin-bottom: -90px;
+  /* 幅と高さを設定 */
+  width: 300px;
+  height: auto;
+}
+
+/* Myフォト　ここまで　↑ */
+#aboutmain .content {
+  /* 背景色を指定 */
+  background-color: #fff;
+  /* 角を丸くする */
+  border-radius: 50px;
+  /* 幅を100%に設定 */
+  width: 100%;
+  /* 上マージンを調整して下に配置 */
+  margin: 200px auto 0;
+  /* パディングを設定 */
+  padding: 40px;
+}
+
+/* プロフィール写真と名前を中央に縦並び */
+.intro-wrapper {
+  /* 要素を縦に並べる */
+  display: flex;
+  flex-direction: column;
+  /* 中央に揃える */
+  align-items: center;
+  /* 要素間の隙間を設定 */
+  gap: 5px;
+  /* 下マージンを設定 */
+  margin-bottom: 50px;
+}
+
+/* 名前 */
+.namebox h2,
+.namebox p {
+  /* テキストを中央揃えにする */
+  text-align: center;
+  /* マージンをリセット */
+  margin: 0;
+}
+
+#aboutmain .content h3 {
+  /* フォントサイズを設定 */
+  font-size: 20px;
+  /* 背景色を指定 */
+  background-color: #e2d8da;
+  /* 上に点線のボーダーを設定 */
+  border-top: 1px dotted #8e7264;
+  /* 上マージンと中央配置を設定 */
+  margin: 150px auto 0;
+  /* 幅を設定 */
+  width: 80%;
+  /* 文字の太さを通常に戻す */
+  font-weight: normal;
+  /* パディングを設定 */
+  padding: 5px;
+  /* 左側にパディングを設定 */
+  padding-left: 15px;
+}
+
+.proftext p {
+  /* フォントサイズを設定 */
+  font-size: 24px;
+  /* 幅と中央配置、行の高さを設定 */
+  width: 80%;
+  margin: 20px auto;
+  line-height: 2;
+}
+
+.outline {
+  /* 要素を縦に並べる */
+  display: flex;
+  flex-direction: column;
+  /* 左に配置 */
+  justify-content: left;
+  /* 要素間の隙間を設定 */
+  gap: 5px;
+  /* 幅と中央配置を調整 */
+  width: 80%;
+  text-align: left;
+  margin-top: 50px;
+  margin-left: 200px;
+}
+
+.outline p {
+  /* フォントサイズを設定 */
+  font-size: 20px;
+}
+
+.outline span {
+  /* フォントサイズを設定 */
+  font-size: 14px;
+}
+
+/* <h3>制作期間</h3>　<h3>コンセプト</h3>　↓ */
+.portcontent h3 {
+  /* 文字を太字にする */
+  font-weight: bold;
+  /* 下マージンを設定 */
+  margin-bottom: 10px;
+  /* フォントサイズを設定 */
+  font-size: 20px;
+}
+
+/* <h2>未経験分野への挑戦</h2>  ↓ */
+#wrapper h2 {
+  /* 文字を太字にする */
+  font-weight: bold;
+  /* 下マージンを設定 */
+  margin-bottom: 10px;
+  /* フォントサイズを設定 */
+  font-size: 20px;
+}
+
+#born p {
+  /* 下マージンを調整 */
+  margin-bottom: -50px;
+}
+
+/* タイムライン */
+.cp_timeline04 {
+  /* 親要素を基準に子要素を配置できるようにする */
+  position: relative;
+  /* 上下マージンと中央配置 */
+  margin: 3em auto;
+  /* 下パディングを設定 */
+  padding-bottom: 2em;
+  /* 幅を設定 */
+  width: 80%;
+}
+
+.cp_timeline04:before {
+  /* 疑似要素を作成 */
+  position: absolute;
+  /* 上と左からの位置を設定 */
+  top: 0px;
+  top: -30px;
+  left: 45px;
+  /* 幅と高さを設定 */
+  width: 3px;
+  height: 100%;
+  /* 疑似要素に内容を持たせる */
+  content: '';
+  /* 背景色を指定 */
+  background: #8e7264;
+}
+
+.cp_timeline04 .timeline_item {
+  /* マージンを調整 */
+  margin: 0px 0px 0px 80px;
+}
+
+.cp_timeline04 .timeline_item .time_date .time {
+  /* フォントスタイルとサイズ、太さを設定 */
+  font-family: serif;
+  font-size: 6em;
+  font-weight: bold;
+  /* 親要素を基準に子要素を配置できるようにする */
+  position: relative;
+  /* マージンをリセット */
+  margin: 0;
+  /* 文字間隔を調整 */
+  letter-spacing: 3px;
+  /* 文字色を薄くする */
+  color: rgba(142, 114, 100, 0.281);
+}
+
+.cp_timeline04 .timeline_item .time_date .time:before {
+  /* 疑似要素を作成 */
+  position: absolute;
+  /* 上と左からの位置を設定 */
+  top: 50%;
+  left: -42px;
+  /* 幅と高さを設定 */
+  width: 10px;
+  height: 10px;
+  /* 疑似要素に内容を持たせる */
+  content: '';
+  /* 45度回転させる */
+  transform: rotate(45deg);
+  /* ボーダーを設定 */
+  border: 3px solid #8e7264;
+  /* 背景色を指定 */
+  background: #fff;
+}
+
+.cp_timeline04 .timeline_item .time_date .flag {
+  /* フォントサイズと太さを設定 */
+  font-size: 1.5em;
+  font-weight: bold;
+  /* 上マージンを調整 */
+  margin: -60px 0 0 0;
+  /* 文字色を指定 */
+  color: #8e7264;
+}
+
+.cp_timeline04 .timeline_item .desc {
+  /* フォントサイズと行の高さを設定 */
+  font-size: 0.8em;
+  line-height: 2;
+  /* 上マージンと左ボーダー、下マージンを設定 */
+  margin-top: 10px;
+  padding-left: 20px;
+  border-left: 1px solid #8e7264;
+  margin-bottom: 60px;
+}
+
+/* タイムラインのレスポンシブ対応 */
+@media only screen and (max-width: 640px) {
+  .cp_timeline04:before {
+    /* 縦棒の位置を調整 */
+    left: 0;
+  }
+
+  .cp_timeline04 .timeline_item .time_date .time:before {
+    /* ◇の位置を調整 */
+    left: -43px;
+  }
+
+  .cp_timeline04 .timeline_item {
+    /* マージンを調整 */
+    margin: 0px 0px 0px 40px;
+  }
+
+  .cp_timeline04 .timeline_item .time_date .time {
+    /* フォントサイズとマージンを調整 */
+    font-size: 24px;
+    margin: 20px auto;
+  }
+
+  .cp_timeline04 .timeline_item .time_date .flag {
+    /* フォントサイズとマージンを調整 */
+    font-size: 12px;
+    margin: 20px auto;
+  }
+
+  .cp_timeline04 .timeline_item .time_date .desc p {
+    /* パディングとボーダー、マージンを調整 */
+    padding-left: 0;
+    border-top: 1px solid #8e7264;
+    border-left: none;
+    margin: 20px auto;
+  }
+
+  .cp_timeline04 .timeline_item .desc p {
+    /*タイムラインの文章*/
+    /* テキストの配置とフォントサイズ、幅を調整 */
+    text-align: left;
+    font-size: 16px;
+    width: 100%;
+  }
+}
+
+/* タイムラインのレスポンシブ対応 　↑*/
+
+/* about.htmlのレスポンシブ対応　↓ */
+@media screen and (max-width:640px) {
+  #aboutbody {
+    /* パディングを調整 */
+    padding: 10px;
+  }
+
+  #aboutmain {
+    /* 幅と中央配置を調整 */
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  #aboutme {
+    /* 幅と中央配置、テキストの配置を調整 */
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  #aboutme h1 {
+    /* フォントサイズと中央配置、マージン、幅を調整 */
+    font-size: 32px;
+    text-align: center;
+    display: block;
+    margin: 80px auto 0;
+    width: 100%;
+  }
+
+  #aboudog1 {
+    /* 要素を非表示にする */
+    display: none;
+  }
+
+  #aboudog2 {
+    /* 絶対配置を解除 */
+    position: static;
+    /* マージンとブロックレベル要素表示、高さを調整 */
+    margin: 10px auto 100px;
+    display: block;
+    height: 50px;
+    width: auto;
+  }
+
+  .myphoto {
+    /* 幅とマージン、重なり順を調整 */
+    width: 150px;
+    height: auto;
+    margin: -50px auto 0;
+    z-index: 1;
+    position: relative;
+  }
+
+  .namebox {
+    /* マージンを調整 */
+    margin: -50px auto -150px;
+  }
+
+  .namebox h2 {
+    /* フォントサイズを調整 */
+    font-size: 20px;
+  }
+
+  .namebox p {
+    /* フォントサイズを調整 */
+    font-size: 16px;
+  }
+
+  .proftext p {
+    /* フォントサイズとマージン、テキストの配置を調整 */
+    font-size: 16px;
+    margin-bottom: -100px;
+    text-align: left;
+  }
+
+  .proftext h3 {
+    /* 幅とフォントサイズ、中央配置を調整 */
+    width: 80%;
+    font-size: 14px;
+    margin: 0 auto;
+  }
+
+  /* 全体のボックスサイズをborder-boxに */
+  *,
+  *::before,
+  *::after {
+    /* paddingとborderを幅と高さに含める設定 */
+    box-sizing: border-box;
+  }
+
+  #aboutmain .content {
+    /* 背景色、角丸、はみ出しを調整 */
+    background-color: #fff;
+    border-radius: 50px;
+    overflow: visible;
+    /* 最大幅とマージン、パディングを調整 */
+    max-width: 90%;
+    margin: 30px auto 0;
+    padding: 20px;
+  }
+}
+
+/* about.htmlのレスポンシブ対応　↑　
+*/
+
+/* about.html　↑ */
+
+
+/* ==================== skill.html　↓ ==================== */
+#myskill {
+  /* 下マージンを設定 */
+  margin-bottom: 200px;
+}
+
+#skillmenu ul {
+  /* 要素を横並びにする */
+  display: flex;
+  /* 中央に配置 */
+  justify-content: center;
+  /* 要素間の隙間を設定 */
+  gap: 100px;
+  /* 上下マージンを設定 */
+  margin: 50px 0 10px;
+}
+
+#skillmenu li a {
+  /* 点線のボーダーとパディングを設定 */
+  border: 1px dotted #181914;
+  padding: 5px 20px;
+}
+
+#skillmenu a {
+  /* フォントサイズを設定 */
+  font-size: 20px;
+}
+
+#skillmain {
+  /* 幅とパディングを設定 */
+  width: 100%;
+  padding: 0;
+}
+
+#skillmain .content {
+  /* 背景色、角丸、幅を設定 */
+  background-color: #fff;
+  border-radius: 50px;
+  width: 100%;
+  /* 上マージンを調整して下に配置 */
+  margin: 200px auto 0;
+  /* パディングを設定 */
+  padding: 40px;
+}
+
+.skillname {
+  /* 要素を横並びにする */
+  display: flex;
+  /* 垂直方向の中央に揃える */
+  align-items: center;
+  /* 中央に配置 */
+  justify-content: center;
+  /* 要素間の隙間を設定 */
+  gap: 5px;
+  /* パディングを設定 */
+  padding: 5px 0;
+  /* 最大幅を設定 */
+  max-width: 1000px;
+  /* マージンを調整 */
+  margin: 0 auto -100px 250px;
+}
+
+.skillname h1 {
+  /* フォントサイズとマージン、行の高さを設定 */
+  font-size: 100px;
+  margin: 0;
+  line-height: 1;
+}
+
+.skillname img {
+  /* 最大高さを設定 */
+  max-height: 300px;
+  /* マージンをリセット */
+  margin: 0;
+  /* 垂直方向の中央に揃える */
+  vertical-align: middle;
+  /* インラインブロック要素として表示 */
+  display: inline-block;
+  /* 要素を上に少しずらす */
+  transform: translateY(3px);
+}
+
+.skilltitle p {
+  /* テキストを両端揃えにする */
+  text-align: justify;
+  /* フォントサイズを設定 */
+  font-size: 24px;
+  /* マージンを調整 */
+  margin: 0 auto 20px;
+  /* 幅を設定（6文字分より少し広め） */
+  width: 6em;
+  /* 文字間隔を調整 */
+  letter-spacing: 0.5em;
+}
+
+.skilltitle2 p {
+  /* テキストを両端揃えにする */
+  text-align: justify;
+  /* フォントサイズを設定 */
+  font-size: 24px;
+  /* マージンを調整 */
+  margin: 0 auto 20px;
+  /* 幅を設定（10文字分） */
+  width: 10em;
+  /* 文字間隔を調整 */
+  letter-spacing: 0.5em;
+}
+
+/* 資格一覧　↓ */
+.skilllist {
+  /* 要素を横並びにする */
+  display: flex;
+  /* 要素を均等に配置 */
+  justify-content: space-between;
+  /* 要素間の隙間を設定 */
+  gap: 40px;
+}
+
+.skilllist .column {
+  /* 列の幅を設定 */
+  width: 45%;
+}
+
+.skilllist ul {
+  /* リストのマーカーを非表示にし、パディングをリセット */
+  list-style-type: none;
+  padding: 0;
+}
+
+.skilllist ul li span {
+  /* 文字を太字にする */
+  font-weight: bold;
+  /* 背景色を指定 */
+  background-color: #8e7264;
+  /* ボーダーを設定 */
+  border: 1px solid #181914;
+  /* 角を丸くする */
+  border-radius: 50px;
+  /* 行の高さを設定 */
+  line-height: 1.5;
+  /* 幅を設定 */
+  width: 80%;
+  /* ブロック要素として表示（マージン:autoを有効にするため） */
+  display: block;
+  /* 上下マージンと中央配置を設定 */
+  margin: 50px auto;
+  /* パディングを設定 */
+  padding: 25px 20px;
+  /* テキストを中央揃えにする */
+  text-align: center;
+  /* 角を丸くする */
+  border-radius: 50px;
+  /* 最大幅を設定 */
+  max-width: 90%;
+  /* 必要に応じて単語を改行する */
+  word-wrap: break-word;
+}
+
+.skilllist ul li:not(:has(span)) {
+  /* 背景色を指定 */
+  background-color: #fff;
+  /* 上下マージンと中央配置を設定 */
+  margin: 50px auto;
+  /* パディングを設定 */
+  padding: 25px 20px;
+  /* ボーダーを設定 */
+  border: 1px solid #181914;
+  /* テキストを中央揃えにする */
+  text-align: center;
+  /* 角を丸くする */
+  border-radius: 50px;
+  /* 最大幅を設定 */
+  max-width: 90%;
+  /* 必要に応じて単語を改行する */
+  word-wrap: break-word;
+  /* 既存のスタイルに追加 */
+  /* 最小の高さを設定 */
+  min-height: 100px;
+  /* 要素をフレキシブルボックスとして表示 */
+  display: flex;
+  /* 垂直方向の中央に揃える */
+  align-items: center;
+  /* 水平方向の中央に揃える */
+  justify-content: center;
+}
+
+/* 資格一覧　↑ */
+/* STUDY　myskillと共有 */
+
+
+/* ==================== スライドショー　↓ ==================== */
+/* スライドショー */
+#practice h2 {
+  /* テキストを中央揃えにする */
+  text-align: center;
+  /* フォントサイズと下マージン、太さを設定 */
+  font-size: 20px;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+/* スライドショー枠 */
+#graphic {
+  /* 上下マージンと中央配置 */
+  margin: 0 auto 500px;
+  /* 親要素を基準に子要素を配置できるようにする */
+  position: relative;
+  /* 最大幅を設定 */
+  max-width: 400px;
+}
+
+/* 全スライド画像 */
+#graphic img {
+  /* 幅と高さを設定 */
+  width: 400px;
+  height: auto;
+  /* ブロックレベル要素として表示 */
+  display: block;
+  /* 上下マージンと中央配置 */
+  margin: 20px auto 200px;
+}
+
+/* 切り替え用クラス */
+.slide_image {
+  /* 絶対位置で配置 */
+  position: absolute;
+  /* 上からの位置を設定 */
+  top: 0;
+  /* 左端を中央に配置 */
+  left: 50%;
+  /* 自分の幅の半分だけ戻す（中央寄せ） */
+  transform: translateX(-50%);
+  /* 最初は非表示 */
+  opacity: 0;
+  /* 不透明度の変化を滑らかにする */
+  transition: opacity 2s;
+}
+
+.now {
+  /* 表示状態にする */
+  opacity: 1;
+}
+
+/* スライドショー　↑ */
+/* ==================== javascript練習　↓ ==================== */
+#Javascript h2,
+#typing h2 {
+  /* 上マージンを設定 */
+  margin-top: 300px;
+  /* テキストを中央揃えにする */
+  text-align: center;
+  /* フォントサイズと下マージン、太さを設定 */
+  font-size: 20px;
+  margin-bottom: 50px;
+  font-weight: bold;
+}
+
+#practice h2 {
+  /* 上マージンを設定 */
+  margin-top: 300px;
+  /* テキストを中央揃えにする */
+  text-align: center;
+  /* フォントサイズと下マージン、太さを設定 */
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+#typing {
+  /* 下マージンを設定 */
+  margin-bottom: 300px;
+}
+
+#practice p {
+  /* フォントサイズとテキストの配置、マージンを調整 */
+  font-size: 18px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.target a {
+  /* ブロックレベル要素として表示 */
+  display: block;
+  /* マージンとパディングを設定 */
+  margin: 0 0 -1px 40px;
+  padding: 10px;
+  /* 文字色を指定 */
+  color: #181914;
+  /* 点線のボーダーを設定 */
+  border: #8e7264 1px solid;
+  /* 角を丸くする */
+  border-radius: 50px;
+  /* 背景色を指定 */
+  background: #e2d8da;
+  /* リストのマーカーを非表示 */
+  list-style-type: none;
+  /* リンクの下線を非表示 */
+  text-decoration: none;
+}
+
+.target li {
+  /* ブロックレベル要素として表示 */
+  display: block;
+  /* マージンとパディングを設定 */
+  margin: 0 0 -1px 40px;
+  padding: 10px;
+  /* 文字色を指定 */
+  color: #181914;
+  /* 点線のボーダーを設定 */
+  border: #8e7264 1px solid;
+  /* 角を丸くする */
+  border-radius: 50px;
+  /* 背景色を指定 */
+  background: #e2d8da;
+  /* リストのマーカーを非表示 */
+  list-style-type: none;
+  /* リンクの下線を非表示 */
+  text-decoration: none;
+}
+
+.target a:hover {
+  /* ホバー時の背景色、文字色、太さを設定 */
+  background: #e2d8da;
+  color: #181914;
+  font-weight: bold;
+}
+
+.target li:hover {
+  /* ホバー時の背景色、文字色、太さを設定 */
+  background: #e2d8da;
+  color: #181914;
+  font-weight: bold;
+}
+
+.target div {
+  /* 上下マージンと中央配置 */
+  margin: 50px auto;
+}
+
+.target dd {
+  /* パディングを設定 */
+  padding: 10px;
+}
+
+.hidden {
+  /* 要素を非表示にする */
+  display: none;
+}
+
+.backskill a {
+  /* フォントサイズと中央配置、ブロックレベル要素表示を設定 */
+  font-size: 16px;
+  text-align: center;
+  display: block;
+}
+
+/* タイピング練習　↓ */
+#typing p {
+  /* フォントサイズとテキストの配置、行の高さを設定 */
+  font-size: 18px;
+  text-align: left;
+  line-height: 1.5;
+}
+
+#typing p:first-of-type {
+  /* 最初の段落のテキストを中央揃えにし、下マージンを設定 */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#typingtext {
+  /* フォントサイズとテキストの配置、マージン、行の高さを設定 */
+  font-size: 18px;
+  text-align: left;
+  margin: 10px auto 50px;
+  line-height: 2;
+}
+
+/* タイピング練習　↑ */
+
+/* javascript練習のレスポンシブ　　↓ */
+@media screen and (max-width:640px) {
+  #practice p {
+    /* フォントサイズと幅、テキストの配置を調整 */
+    font-size: 16px;
+    width: 90%;
+    text-align: left;
+    /* 中央配置とパディング、要素の並べ方を調整 */
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  #phot h2 {
+    /* 上マージンを調整 */
+    margin-top: 200px;
+  }
+
+  #Javascript h2 {
+    /* 上マージンを調整 */
+    margin-top: -100px;
+  }
+
+  #graphic img {
+    /* 幅と下マージンを調整 */
+    width: 300px;
+    height: auto;
+    margin-bottom: 0;
+  }
+
+  #typing h2 {
+    /* フォントサイズと上マージンを調整 */
+    font-size: 18px;
+    margin-top: 150px;
+  }
+
+  .target div {
+    /* 幅とインラインブロック要素表示、マージンを調整 */
+    width: 90%;
+    display: inline-block;
+    margin: 20px auto;
+  }
+
+  #panel1 a,
+  #panel2 a,
+  #panel3 a,
+  .submenu a,
+  .submenu li,
+  #typing p {
+    /* フォントサイズを調整 */
+    font-size: 16px;
+  }
+
+  #typing {
+    /* 幅とマージンを調整 */
+    width: 90%;
+    margin: 50px auto;
+  }
+
+  .submenu dd a {
+    /* フォントサイズを調整 */
+    font-size: 14px;
+  }
+
+  .submenu dd img {
+    /* 画像を非表示にする */
+    display: none;
+  }
+}
+
+/* javascript練習のレスポンシブ　　↑　*/
+/* javascript練習javascript練習　↑ */
+
+
+/* ==================== skill.htmlのレスポンシブ対応　　↓ ==================== */
+@media screen and (max-width: 640px) {
+  #skillmedia {
+    /* 要素を縦に並べる */
+    display: flex;
+    flex-direction: column;
+    /* 中央に揃える */
+    justify-content: center;
+    align-content: center;
+  }
+
+  #skillmenu ul {
+    /* 要素間の隙間を調整 */
+    gap: 40px;
+  }
+
+  #skillmedia a {
+    /* フォントサイズを調整 */
+    font-size: 16px;
+  }
+
+  .skillname {
+    /* 要素を縦に並べる */
+    display: flex;
+    flex-direction: column;
+    /* 中央に揃える */
+    justify-content: center;
+    align-content: center;
+    /* マージンを調整 */
+    margin: 50px auto 0;
+  }
+
+  .skillname h1 {
+    /* フォントサイズを調整 */
+    font-size: 48px;
+  }
+
+  .skillname img {
+    /* 最大高さを調整 */
+    max-height: 200px;
+  }
+
+  /* レスポンシブで横並びのリストを縦にする　↓ */
+  .skilllist {
+    /* 横並びから縦並びへ切替 */
+    flex-direction: column;
+    /* 縦並びの間隔を調整 */
+    gap: 20px;
+  }
+
+  #skilltop {
+    /* 上マージンを調整 */
+    margin-top: -70px;
+  }
+
+  .skilllist .column {
+    /* 幅を100%に設定 */
+    width: 100%;
+  }
+
+  .skilllist ul li span {
+    /*パディングとフォントサイズ、幅を調整*/
+    padding: 10px 5px;
+    text-align: center;
+    font-size: 16px;
+    width: 250px;
+  }
+
+  .skilllist ul li:not(:has(span)) {
+    /* パディングとフォントサイズ、幅を調整 */
+    padding: 5px 2px;
+    font-size: 14px;
+    width: 3000px;
+  }
+
+  .skilllist ul li {
+    /* テキストを中央揃えにする */
+    text-align: center;
+  }
+
+  #skillmain .content {
+    /* 幅とパディング、上マージンを調整 */
+    width: 90%;
+    padding: 10px auto;
+    margin-top: 80px;
+  }
+}
+
+/* skill.htmlのレスポンシブ対応　　↑ */
+/* skill.html　↑*/
+
+
+/* ==================== hobby.html  ↓ ==================== */
+#hobbymain {
+  /* 幅と中央配置を調整 */
+  width: 90%;
+  margin: 20px auto;
+}
+
+/* 冒頭文 */
+#hobbymessage {
+  /* マージンとテキストの配置を調整 */
+  margin: 50px auto 30px;
+  text-align: center;
+}
+
+/* メニュー */
+#hobbymenu ul {
+  /* 要素を横並びにする */
+  display: flex;
+  /* 中央に配置 */
+  justify-content: center;
+  /* 要素間の隙間を調整 */
+  gap: 100px;
+  /* 上下マージンを調整 */
+  margin: 50px 0 10px;
+}
+
+#hobbymenu li a {
+  /* 点線のボーダーとパディングを設定 */
+  border: 1px dotted #181914;
+  padding: 5px 20px;
+}
+
+#hobbymenu a {
+  /* フォントサイズを設定 */
+  font-size: 20px;
+}
+
+/* 華のページ */
+/* ポップアップ画像 */
+#body {
+  /* テキストを中央揃えにする */
+  text-align: center;
+  /* 下マージンを設定 */
+  margin-bottom: 150px;
+}
+
+#hanaanime h2 {
+  /* 上下マージンを調整 */
+  margin-top: 150px;
+  margin-bottom: 10px;
+}
+
+#hanaanime img {
+  /* マージンを調整 */
+  margin: 50px 20px 10px;
+  /* 幅を調整 */
+  width: 15%;
+  /* 縦横比を維持 */
+  height: auto;
+}
+
+#hanaanime img:nth-of-type(1) {
+  /* 最初の画像の左マージンをリセット */
+  margin-left: 0;
+}
+
+#hanaanime img:nth-of-type(5) {
+  /* 5番目の画像の右マージンをリセット */
+  margin-right: 0;
+}
+
+#poptext {
+  /*<p id="poptext">画像をクリックすると拡大表示されます</p> */
+  /* 下マージンを調整 */
+  margin-bottom: 10px;
+}
+
+.thumbnail {
+  /* マウスカーソルをポインターにする */
+  cursor: pointer;
+}
+
+#close {
+  /* 絶対位置で配置 */
+  position: absolute;
+  /* 右と上からの位置を設定 */
+  right: 0;
+  top: 0;
+  /* 幅と高さを設定 */
+  width: 30px;
+  height: 30px;
+  /* 行の高さを調整 */
+  line-height: 30px;
+  /* フォントサイズと太さを設定 */
+  font-size: 20px;
+  font-weight: bold;
+  /* マウスカーソルをポインターにする */
+  cursor: pointer;
+}
+
+#mask {
+  /* 背景色を透過させる */
+  background: rgba(0, 0, 0, .7);
+  /* 要素を固定する */
+  position: fixed;
+  /* 画面全体に広げる */
+  inset: 0;
+  /* 最初は非表示 */
+  opacity: 0;
+  visibility: hidden;
+}
+
+#modal {
+  /* 背景色、パディング、角丸を設定 */
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  /* 絶対位置で配置 */
+  position: absolute;
+  /* 中央に配置 */
+  left: 50%;
+  top: 120%;
+  transform: translate(-50%, -50%);
+  /* 最初は非表示 */
+  opacity: 0;
+  visibility: hidden;
+}
+
+#modal img {
+  /* 画像の最大幅と最大高さを設定 */
+  max-width: 90vw;
+  max-height: 80vh;
+  /* 縦横比を維持 */
+  height: auto;
+  width: auto;
+  /* 上下マージンと中央配置 */
+  margin: 10px auto;
+}
+
+/* 移動ボタン */
+.moveBtn {
+  /* 幅と高さを設定 */
+  width: 30px;
+  height: 30px;
+  /* 行の高さを調整 */
+  line-height: 30px;
+  /* フォントサイズと太さを設定 */
+  font-size: 20px;
+  font-weight: bold;
+  /* マウスカーソルをポインターにする */
+  cursor: pointer;
+  /* 背景色と角丸を設定 */
+  background-color: #fff;
+  border-radius: 50%;
+  /* テキストを中央揃えにする */
+  text-align: center;
+}
+
+.moveBtn:hover {
+  /* ホバー時の背景色を透過させる */
+  background: rgba(255, 255, 255, 0.7);
+}
+
+#moveBtn_Left {
+  /* 絶対位置で配置 */
+  position: absolute;
+  /* 左からの位置と中央に配置 */
+  left: 50px;
+  top: 120%;
+  /* 最初は非表示 */
+  opacity: 0;
+  visibility: hidden;
+  /* 変化を滑らかにする */
+  transition: 0.5s;
+}
+
+#moveBtn_Right {
+  /* 絶対位置で配置 */
+  position: absolute;
+  /* 右からの位置と中央に配置 */
+  right: 50px;
+  top: 120%;
+  /* 最初は非表示 */
+  opacity: 0;
+  visibility: hidden;
+  /* 変化を滑らかにする */
+  transition: 0.5s;
+}
+
+
+/* ポップアップ画像ここまで */
+/* 華のトリミング画像　↓ */
+
+/* トリミング写真 */
+
+.hanawrap h2 {
+  /* フォントサイズと中央配置、マージンを調整 */
+  font-size: 18px;
+  text-align: center;
+  margin: 100px auto 20px;
+}
+
+.hanawrap img {
+  /* 上下マージンと中央配置 */
+  margin: 20px auto;
+  /* 角を丸くする */
+  border-radius: 50%;
+  /* フレキシブルボックスとして表示 */
+  display: flex;
+  /* 中央に配置 */
+  justify-content: center;
+  /* 白いボーダーを設定 */
+  border: 10px solid #fff;
+}
+
+#trimming {
+  /* フォントサイズと中央配置、マージンを調整 */
+  font-size: 18px;
+  text-align: center;
+  margin: 20px auto;
+}
+
+/* ランダムに画像を変えるボタン　↓ */
+#btn {
+  /* ブロックレベル要素として表示 */
+  display: block;
+  /* 中央配置 */
+  margin: 0 auto;
+  /* 幅と高さを設定 */
+  width: 100px;
+  height: 50px;
+  /* 背景色と文字色を設定 */
+  background-color: #fff;
+  color: #181914;
+  /* 角を丸くする */
+  border-radius: 30px;
+  /* 点線のボーダーを設定 */
+  border: #8e7264 1px dotted;
+}
+
+/* 華のトリミング画像　↑ */
+/* 繁殖犬　↓ */
+#hanawrap2 {
+  /* マージンとパディングを設定 */
+  margin: 50px auto;
+  padding: 0 20px;
+  /* 要素を横並びにする */
+  display: flex;
+  /* 要素を均等に配置 */
+  justify-content: space-around;
+  /* 要素間の隙間と垂直方向の中央揃えを設定 */
+  gap: 80px;
+  align-items: center;
+}
+
+#hanawrap2 h2 {
+  /* テキストの中央揃えとフォントサイズ、太さを設定 */
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#hanawrap2 p {
+  /* テキストの左揃えとフォントサイズ、マージン、行の高さを設定 */
+  text-align: left;
+  font-size: 18px;
+  margin: 30px auto;
+  line-height: 2;
+}
+
+#hanawrap2 img {
+  /* 角を丸くする */
+  border-radius: 50%;
+}
+
+#hanawrap2 div {
+  /* 要素を縦に並べる */
+  display: flex;
+  flex-direction: column;
+}
+
+#bold {
+  /* フォントサイズと太さを設定 */
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* 繁殖犬　↑ */
+/* 編み物ページ   ↓*/
+#crochetmain {
+  /* 要素を横並びにする */
+  display: flex;
+  /* 要素を均等に配置 */
+  justify-content: space-around;
+}
+
+#crochetmain img {
+  /* 角を丸くする */
+  border-radius: 10px;
+}
+
+#crochetmain .croimg {
+  /* 縦横比を維持し、高さを設定 */
+  width: auto;
+  height: 250px;
+}
+
+#crochetmain .croimg2 {
+  /* 縦横比を維持し、高さを設定 */
+  width: auto;
+  height: 250px;
+}
+
+#crowrap2 div {
+  /* 幅と最大幅、中央配置を調整 */
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#crochet h2 {
+  /* テキストの中央揃えと下マージンを設定 */
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#crochet {
+  /* 上下マージンを調整 */
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+#crowrap {
+  /* 要素を横並びにする */
+  display: flex;
+  /* 要素を均等に配置 */
+  justify-content: space-around;
+  /* 上下マージンを調整 */
+  margin-top: 200px;
+  margin-bottom: 250px;
+}
+
+#crowrap2 {
+  /* 要素を横並びにする */
+  display: flex;
+  /* 中央に配置 */
+  justify-content: center;
+  /* テキストの左揃えとマージン、パディングを調整 */
+  text-align: left;
+  margin: 20px auto 200px;
+  padding: 0;
+}
+
+#crowrap2 p {
+  /* 幅と中央配置、行の高さを設定 */
+  width: 100%;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+#crowrap3 {
+  /* 要素を横並びにする */
+  display: flex;
+  /* 要素間の隙間と中央配置を設定 */
+  gap: 80px;
+  justify-content: center;
+  /* 下マージンとフォントサイズ、行の高さ、文字間隔を設定 */
+  margin-bottom: 200px;
+  font-size: 20px;
+  line-height: 2;
+  letter-spacing: 0.1em;
+}
+
+#crowrap3 img {
+  /* 左マージンと幅、縦横比、角丸を設定 */
+  margin-left: 20px;
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* フルート */
+#flutemain {
+  /* 要素を横並びにする */
+  display: flex;
+  /* 要素間の隙間と中央揃えを設定 */
+  gap: 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+#flutemain img {
+  /* 幅と縦横比、角丸を設定 */
+  width: 300px;
+  height: auto;
+  border-radius: 50%;
+}
+
+#flutewrap img {
+  /* 幅と縦横比、角丸を設定 */
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+}
+
+#fluteimg h2 {
+  /* テキストの中央揃えとフォントサイズ、太さを設定 */
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#fluteimg p {
+  /* フォントサイズと行の高さを設定 */
+  font-size: 20px;
+  line-height: 2;
+}
+
+#flutewrap {
+  /* 要素を横並びにする */
+  display: flex;
+  /* 要素を均等に配置 */
+  justify-content: space-around;
+}
+
+/* hobby.html  ↓ */
+@media screen and (max-width: 640px) {
+  #hobbymain section {
+    /* 下マージンと幅を調整 */
+    margin-bottom: 50px;
+    width: 90%;
+  }
+
+  #hobbymessage p {
+    /* フォントサイズと幅、中央配置、マージンを調整 */
+    font-size: 18px;
+    width: 90%;
+    text-align: left;
+    margin: 20px auto;
+  }
+
+  #hanaanime h2 {
+    /* 文字の太さとフォントサイズを調整 */
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  #hanaanime p {
+    /* フォントサイズと中央配置、幅を調整 */
+    font-size: 16px;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+  }
+  /* メニュー */
+  #hobbymenu ul {
+    /* 要素を縦に並べる */
+    display: flex;
+    flex-direction: column;
+    /* 中央に揃える */
+    justify-content: center;
+    /* 要素間の隙間とマージン、テキストの配置を調整 */
+    gap: 30px;
+    margin: 50px auto 10px;
+    text-align: center;
+  }
+
+  #hobbymenu li a {
+    /* 点線のボーダーとパディングを設定 */
+    border: 1px dotted #181914;
+    padding: 5px 20px;
+  }
+
+  #hobbymenu a {
+    /* フォントサイズを調整 */
+    font-size: 20px;
+  }
+
+  #hobbymedia a {
+    /* フォントサイズを調整 */
+    font-size: 18px;
+  }
+
+}
+
+@media screen and (max-width:930px) {
+
+  /* 華のポップアップ画像レスポンシブ　↓ */
+  .none {
+    /* 1枚目の画像のみを表示させるため、他の画像を非表示に */
+    display: none;
+  }
+
+  #hanaanime img {
+    /* 幅と高さを調整 */
+    width: 300px;
+    height: auto;
+    /* マージンを調整 */
+    margin: 50px auto !important;
+  }
+
+#modal {
+  top: 80%;
+}
+  #moveBtn_Left,
+  #moveBtn_Right {
+    /* 絶対位置で配置 */
+    position: absolute;
+    /* 画像の下に配置 */
+    bottom: -100px;
+    /* 上からの位置の指定を無効にする */
+    top: auto;
+    /* 最初は非表示 */
+    opacity: 0;
+    visibility: hidden;
+    /* 変化を滑らかにする */
+    transition: 0.5s;
+  }
+
+  /* 左右で水平方向だけ違う */
+  #moveBtn_Left {
+    /* 左からの位置を調整 */
+    left: 150px;
+  }
+
+  #moveBtn_Right {
+    /* 右からの位置を調整 */
+    right: 150px;
+  }
+}
+
+/* 華のポップアップ画像レスポンシブ　↑　*/
+@media screen and (max-width:640px) {
+  /* トリミング写真 ↓*/
+  #hana_trimming_img {
+    /* 幅と縦横比を調整 */
+    width: 250px;
+    height: auto;
+  }
+
+  /* 繁殖犬　↓ */
+  #hanawrap2 {
+    /* 要素を縦に並べる */
+    display: flex;
+    flex-direction: column;
+  }
+
+  #hanawrap2 h2 {
+    /* フォントサイズを調整 */
+    font-size: 18px;
+  }
+
+  #hanawrap2 p {
+    /* フォントサイズと行の高さを調整 */
+    font-size: 16px;
+    line-height: 2;
+  }
+
+  #trimming {
+    /* 行の高さとフォントサイズを調整 */
+    line-height: 1.5;
+    font-size: 16px;
+  }
+
+  #hanabottom img {
+    /* 幅と縦横比を調整 */
+    width: 250px;
+    height: auto;
+  }
+
+  #hanabottom p {
+    /* 下マージンを調整 */
+    margin-bottom: 80px;
+  }
+
+  /* 繫殖犬　↑ */
+
+  /* 編み物ページのレスポンシブ対応 */
+  #crochetmain {
+    /* 要素を縦に並べる */
+    display: flex;
+    flex-direction: column;
+    /* 要素間の隙間と中央配置を調整 */
+    gap: 20px;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  #crochetmain .croimg {
+    /* 幅と高さを調整 */
+    width: 200px;
+    height: auto;
+    /* 中央に配置 */
+    margin: 0 auto;
+  }
+
+  #crochetmain .croimg2 {
+    /* 幅と高さを調整 */
+    width: 200px;
+    height: auto;
+    /* 中央に配置 */
+    margin: 0 auto;
+  }
+
+  #crowrap2 p {
+    /* フォントサイズと行の高さを調整 */
+    font-size: 16px;
+    line-height: 2;
+  }
+
+  #crowrap3 {
+    /* 要素を縦に並べる */
+    display: flex;
+    flex-direction: column;
+    /* 上マージンを調整 */
+    margin-top: 100px;
+  }
+
+  #crowrap3 p {
+    /* 下マージンとフォントサイズ、行の高さを調整 */
+    margin-bottom: 80px;
+    font-size: 16px;
+    line-height: 2;
+  }
+
+  #crowrap3 img {
+    /* 幅と高さ、中央配置を調整 */
+    width: 200px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  /* フルートページのレスポンシブ対応 */
+  #flutemain {
+    /* 要素を縦に並べる */
+    display: flex;
+    flex-direction: column;
+    /* 中央に揃える */
+    justify-content: center;
+    align-items: center;
+    /* パディングとマージンを調整 */
+    padding: 0;
+    margin: 5px auto 50px auto;
+  }
+
+  #flutemain p {
+    /* 最大幅とフォントサイズ、行の高さを調整 */
+    max-width: 80%;
+    font-size: 16px;
+    line-height: 2;
+  }
+
+  #flutemain img {
+    /* 幅と高さを調整 */
+    width: 300px;
+    height: auto;
+  }
+
+  #fluteh2 h2 {
+    /* 幅とフォントサイズを調整 */
+    width: 80%;
+    font-size: 18px;
+  }
+
+  #flutewrap {
+    /* 要素を縦に並べる */
+    display: flex;
+    flex-direction: column;
+    /* 中央に揃える */
+    justify-content: center;
+    align-items: center;
+    /* 要素間の隙間を調整 */
+    gap: 15px;
+  }
+
+  #flutewrap img {
+    /* 幅と高さを調整 */
+    width: 250px;
+    height: auto;
+  }
+}
+/* hobby.html  ↑ */
