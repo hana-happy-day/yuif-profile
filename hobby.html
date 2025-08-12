@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>Profile</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <!-- スマートフォンでのピンチイン・アウトによる拡大縮小を許可する　P314 -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <!-- 電話番号の自動認識機能を無効にする　P315 -->
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- IEの互換表示機能を無効にする　P358 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css" media="all">
+    <link rel="stylesheet" href="css/style.css" media="all">
+    <link rel="icon" href="img/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="prerconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- 名前の英字 -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cardo:ital@1&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
+        rel="stylesheet">
+    <!-- 筆記体英字 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body id="aboutbody">
+    <header id="header">
+        <!-- ハンバーガー -->
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="navi">
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skill.html">Skill</a></li>
+                <li><a href="hobby.html">Hobby</a></li>
+            </ul>
+        </nav>
+        <div>
+            <ol>
+                <li><a href="index.html">ホーム</a></li>
+                <li class="path">&gt;&nbsp;Hobby</li>
+            </ol>
+        </div>
+
+    </header>
+    <main id="hobbymain">
+        <div id="hobbymessage">
+            <p>私自身を知っていただくために、趣味や愛犬との日々をご紹介します。</p>
+        </div>
+        <div id="hobbymenu">
+            <ul id="hobbymedia">
+                <li><a href="#hanaanime">愛犬について</a></li>
+                <li><a href="#crochet">編み物</a></li>
+                <li><a href="#fluteimg">フルート</a></li>
+            </ul>
+        </div>
+        <section id="body">
+            <div id="hanaanime">
+                <h2>愛犬&emsp;華との出会い</h2>
+                <p>以前、華との出逢いを漫画にしてもらいました。</p>
+
+
+                <div id="mask"></div>
+
+                <div id="moveBtn_Left" class="moveBtn">←</div>
+                <div id="moveBtn_Right" class="moveBtn">→</div>
+
+
+                    <!-- サムネイル画像 -->
+                <img class="thumbnail" src="img/hana/hana.PNG" alt="サムネイル画像">
+                <img class="thumbnail none" src="img/hana/hana1.png" alt="サムネイル画像">
+                <img class="thumbnail none" src="img/hana/hana2.png" alt="サムネイル画像">
+                <img class="thumbnail none" src="img/hana/hana3.png" alt="サムネイル画像">
+                <img class="thumbnail none" src="img/hana/hana4.png" alt="サムネイル画像">
+
+
+                <!-- ポップアップ画像 -->
+                <div id="modal">
+                    <img id="imgPopup" src="images/img1.jpg" alt="ポップアップ画像">
+                    <!-- 閉じるボタン -->
+                    <div id="close">×</div>
+                </div>
+
+            </div>
+<p class="backskill"><a href="skill.html#Javascript">（Skillページへ）</p>
+        </section>
+        <section class="hanawrap">
+            <h2>毎月増える宝物</h2>
+
+            <p>
+                <img id="hana_trimming_img" src="img/hana/photo1.png" alt="トリミング写真">
+            </p>
+            <button id="btn" onClick="hana_trimming()">Change</button>
+            <p id="trimming">トリミングに行くとかわいいフォトスタジオで
+                毎回撮影してくれます。</p>
+            <p class="backskill"><a href="skill.html#Javascript">（Skillページへ）</p>
+        </section>
+        <section id="hanawrap2">
+            <div>
+                <h2>愛犬・華との出会いを通して</h2>
+                <p>&emsp;私の愛犬・華は、かつて「繁殖犬」として劣悪な環境で過ごしていました。
+                    狭いケージの中で光を見ることもなく、繰り返し出産を強いられる日々。引き取った当初は痩せ細り、表情も消えていました。
+                    <br>&emsp;そんな華が、今では安心して私のそばで眠るようになった姿は、時間と信頼がもたらす変化の大きさを教えてくれました。
+                    日本には、まだ多くの犬たちが同じような状況に置かれています。この現実を、少しでも知っていただけたら嬉しく思います。
+                </p>
+            </div>
+            <div id="hanabottom">
+                <img src="img/hana/hana.hanshoku.JPEG">
+                <p id="bold">引き取った当初の華</p>
+            </div>
+        </section>
+        <div id="crochet">
+            <h2>かぎ針編み作品</h2>
+            <section>
+                <div id="crochetmain">
+                    <div><img class="croimg" src="img/crochet/crochet1.jpg"></div>
+                    <div><img class="croimg2" src="img/crochet/crochet4.jpg"></div>
+                    <div><img class="croimg" src="img/crochet/crochet3.jpg"></div>
+                    <div><img class="croimg2" src="img/crochet/crochet2.jpg"></div>
+                </div>
+            </section>
+            <section id="crowrap2">
+                <div>
+                    <p>&emsp;主に、犬用ニット帽をメインに編んでいます。<br>モデルはもちろん愛犬の華。
+                        お友達に頼まれて作ることもあります。
+                    </p>
+                </div>
+            </section>
+            <section id="crowrap3">
+                <img src="img/crochet/amikai.jpeg">
+                <div>
+                    <p>&emsp;犬友達で編み物に興味のある方と一緒に編み物会を開催。
+                        ドッグカフェや自宅で行うのでもちろんわんちゃんも同伴。
+                        <br>&emsp;お膝に抱っこしたまま編み物をしたり、編みながらボールなげたり、わんちゃんが退屈しないようにノーズワークを設置するなど工夫しています。
+                        <br>&emsp;大好きなわんちゃんに囲まれて編み物をするしあわせ空間です！
+                    </p>
+                </div>
+            </section>
+            <section id="fluteimg">
+                <h2>憧れのフルート</h2>
+                <div id="flutemain">
+                    <div><img src="img/flute/flute4.JPEG"> </div>
+                    <p>&emsp;大人になってからフルートを習い始めました。最初は思うように音が出ず、指使いもぎこちなくて戸惑うこともありましたが、レッスンを重ねるうちに少しずつ音色を楽しめるようになり、フルートの世界にどんどん惹かれていきました。
+                        <br>&emsp;数年前には、ついに自分のフルートを購入。リッププレートに入った繊細な彫刻がとても気に入っていて、手にするたびに特別な気持ちになります。
+                        お気に入りの楽器があると、練習へのモチベーションもぐんと上がり、もっともっとフルートが大好きになりました。<br>
+                        &emsp;今では、自分のペースで好きな曲を練習して楽しんでいます。音を奏でる時間は、心が穏やかになる大切なひとときです。
+                    </p>
+
+                </div>
+            </section>
+
+            <section id="flutewrap">
+
+                <div><img src="img/flute/flute2.JPEG"></div>
+                <div><img src="img/flute/flute3.JPEG"></div>
+                <div><img src="img/flute/flute1.JPEG"></div>
+
+
+            </section>
+
+    </main>
+
+
+
+    <footer>
+        <a href="hobby.html" id="page-top">TOP</a>
+        <p> &copy;Yui&#160;Fukushima</p>
+    </footer>
+
+
+
+</body>
+
+</html>
