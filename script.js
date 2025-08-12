@@ -1,24 +1,38 @@
-$(function() {
-  // ハンバーガーメニュー
-  $(".hamburger").click(function() {
-    $(this).toggleClass("active");
-    $(".navi").toggleClass("active");
+
+//   // ハンバーガーメニュー
+
+document.addEventListener("DOMContentLoaded", function() {
+  // ハンバーガーメニューの要素を取得
+  const hamburger = document.querySelector(".hamburger");
+  const navi = document.querySelector(".navi");
+  const navLinks = document.querySelectorAll(".navi a");
+
+  // ハンバーガーメニューがクリックされたときの処理
+  hamburger.addEventListener("click", function() {
+    this.classList.toggle("active");
+    navi.classList.toggle("active");
   });
 
-  $(".nav a").click(function() {
-    $(".hamburger").removeClass("active");
-    $(".navi").removeClass("active");
+  // メニュー内のリンクがクリックされたときの処理
+  navLinks.forEach(link => {
+    link.addEventListener("click", function() {
+      hamburger.classList.remove("active");
+      navi.classList.remove("active");
+    });
   });
 });
 
-// jQueryに依存しないスクリプトは、DOMContentLoadedイベントリスナーで囲むことで、
-// HTML要素が完全に読み込まれた後に実行されることを保証します。
+// ハンバーガーメニュー　↑
+// スライドショー　↓
 document.addEventListener("DOMContentLoaded", function() {
   // スライドショー
   const slides = document.querySelectorAll(".slide_image");
   let slideIndex = 0;
 
   function slide_show() {
+    // スライドが存在しない場合は何もしない
+    if (slides.length === 0) return;
+
     // 現在表示中のスライドを非表示
     slides[slideIndex].classList.remove("now");
 
@@ -29,26 +43,31 @@ document.addEventListener("DOMContentLoaded", function() {
     slides[slideIndex].classList.add("now");
   }
 
-  // 3秒ごとに切り替え
-  setInterval(slide_show, 3000);
+  // スライドがあるときだけ定期実行
+  if (slides.length > 0) {
+    setInterval(slide_show, 3000);
+  }
 
   // 開閉メニュー
   const panels = document.querySelectorAll('.submenu dt');
   panels.forEach((panel) => {
     panel.addEventListener('click', () => {
-      // hiddenクラスがあれば削除、なければ追加する
       panel.nextElementSibling.classList.toggle('hidden');
     });
   });
+});
+
 
   // hana.htmlの漫画のポップアップ
+  document.addEventListener('DOMContentLoaded', () => {
   const thumbnails = document.querySelectorAll('.thumbnail');
-  const imgPopup = document.querySelector('#imgPopup');
-  const close = document.querySelector('#close');
-  const modal = document.querySelector('#modal');
-  const mask = document.querySelector('#mask');
-  const moveBtnLeft = document.querySelector('#moveBtn_Left');
-  const moveBtnRight = document.querySelector('#moveBtn_Right');
+  const imgPopup = document.getElementById('imgPopup');
+  const close = document.getElementById('close');
+  const modal = document.getElementById('modal');
+  const mask = document.getElementById('mask');
+  const moveBtnLeft = document.getElementById('moveBtn_Left');
+  const moveBtnRight = document.getElementById('moveBtn_Right');
+  
   let currentImageIndex = 0;
 
   const showKeyframes = {
@@ -67,39 +86,41 @@ document.addEventListener("DOMContentLoaded", function() {
     fill: 'forwards',
   };
 
-  // モーダル表示
-  thumbnails.forEach((thumbnail, i) => {
-    thumbnail.addEventListener('click', (event) => {
-      event.preventDefault();
-      currentImageIndex = i;
-      imgPopup.src = thumbnails[currentImageIndex].src;
-      modal.animate(showKeyframes, options);
-      mask.animate(showKeyframes, options);
+  if (thumbnails.length > 0) {
+    thumbnails.forEach((thumbnail, i) => {
+      thumbnail.addEventListener('click', (e) => {
+        e.preventDefault();
+        currentImageIndex = i;
+        imgPopup.src = thumbnails[i].src;
+        modal.animate(showKeyframes, options);
+        mask.animate(showKeyframes, options);
+        if (moveBtnLeft && moveBtnRight) {
+          moveBtnLeft.animate(showKeyframes, options);
+          moveBtnRight.animate(showKeyframes, options);
+        }
+      });
+    });
+  }
+
+  if (close) {
+    close.addEventListener('click', () => {
+      modal.animate(hideKeyframes, options);
+      mask.animate(hideKeyframes, options);
       if (moveBtnLeft && moveBtnRight) {
-        moveBtnLeft.animate(showKeyframes, options);
-        moveBtnRight.animate(showKeyframes, options);
+        moveBtnLeft.animate(hideKeyframes, options);
+        moveBtnRight.animate(hideKeyframes, options);
       }
     });
-  });
+  }
 
-  // モーダル閉じる
-  close.addEventListener('click', () => {
-    modal.animate(hideKeyframes, options);
-    mask.animate(hideKeyframes, options);
-    if (moveBtnLeft && moveBtnRight) {
-      moveBtnLeft.animate(hideKeyframes, options);
-      moveBtnRight.animate(hideKeyframes, options);
-    }
-  });
+  if (mask && close) {
+    mask.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      close.click();
+    });
+  }
 
-  // マスククリックで閉じる（遷移防止つき）
-  mask.addEventListener('click', (event) => {
-    event.preventDefault();
-    event.stopPropagation();
-    close.click();
-  });
-
-  // 右移動
   if (moveBtnRight) {
     moveBtnRight.addEventListener('click', () => {
       currentImageIndex++;
@@ -108,7 +129,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 
-  // 左移動
   if (moveBtnLeft) {
     moveBtnLeft.addEventListener('click', () => {
       currentImageIndex--;
@@ -116,6 +136,7 @@ document.addEventListener("DOMContentLoaded", function() {
       imgPopup.src = thumbnails[currentImageIndex].src;
     });
   }
+});
 
   // 華のトリミング画像ランダム表示
   window.hana_trimming = function() {
@@ -137,4 +158,3 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("hana_trimming_img").src = img_data;
   };
 
-});
