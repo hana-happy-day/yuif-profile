@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>Profile</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <!-- スマートフォンでのピンチイン・アウトによる拡大縮小を許可する　P314 -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <!-- 電話番号の自動認識機能を無効にする　P315 -->
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- IEの互換表示機能を無効にする　P358 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css" media="all">
+    <link rel="stylesheet" href="css/style.css" media="all">
+    <link rel="icon" href="img/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- 名前の英字 -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cardo:ital@1&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
+        rel="stylesheet">
+    <!-- 筆記体英字 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body #aboutbody>
+    <header id="header">
+        <!-- ハンバーガー -->
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="navi">
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skill.html">Skill</a></li>
+                <li><a href="hobby.html">Hobby</a></li>
+            </ul>
+        </nav>
+        <div>
+            <ol>
+                <li><a href="index.html">ホーム</a></li>
+                <li class="path">&gt;&nbsp;About</li>
+            </ol>
+        </div>
+
+    </header>
+    <main id="aboutmain">
+         
+        <section id="aboutme">
+
+            <h1 class="sacramento-regular">About Me</h1>
+            <div id="aboutimg">
+                <img id="aboudog1" src="img/toypY-removebg-preview.png">
+                <img id="aboudog2" src="img/toypeedle2.png">
+            </div>
+
+            <div class="content">
+                <div class="intro-wrapper">
+                    <img class="myphoto" src="img/profile1.jpg" alt="プロフィール画像">
+                    <div class="namebox">
+                        <h2>福島&emsp;唯</h2>
+                        <p class="cardo-regular-italic">Fukushima&emsp;Yui</p>
+                    </div>
+                </div>
+                <div class="proftext" id="born">
+                    <h3>出身地</h3>
+                    <p>北海道函館市</p>
+
+
+                </div>
+                <div class="proftext">
+                    <h3>自己紹介</h3>
+                    <p id="myse"> &emsp;介護福祉士として10年以上、働いてきました。
+                        その経験を活かして、大好きな祖父を在宅で介護し、最期まで看取ることができたことは、私の人生の中で最も大切な経験のひとつです。
+                        現在は、Web制作の勉強中です。HTMLやCSSを使ったコーディング、JavaScript、Photoshopなどを学んでいます。
+                        趣味は、かぎ針編みとフルート。
+                        そして、毎日を彩ってくれる大切な家族、愛犬「華（はな）」と過ごす時間を大切にしています。</p>
+                </div>
+
+
+                <div>
+                    <h3>経歴</h3>
+                    <div class="cp_timeline04">
+                        <div class="timeline_item">
+                            <div class="time_date">
+                                <p class="time">2012</p>
+                                <p class="flag">池上学院グローバルアカデミー専門学校<br>卒業そして就職</p>
+                            </div>
+                            <div class="desc">
+                                <p>&emsp;音楽療法学科で3年間音楽療法について学びました。音楽療法とは音楽療法とは、音楽の力を活用して、心身の健康や生活の質を向上させる専門的なケアの一つです。医療や福祉の現場で、専門の音楽療法士が、患者様や利用者様の状態に合わせて、歌や楽器演奏、音楽鑑賞などのプログラムを提供します。
+                                    <br>&emsp;卒業後はグループホームに介護職として就職しました。
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="timeline_item">
+                            <div class="time_date">
+                                <p class="time">2016</p>
+                                <p class="flag">看護学校への進学</p>
+                            </div>
+                            <div class="desc">
+                                <p>&emsp;介護の仕事を通して、医療的な知識を身につけよりスキルアップしたいと考え、退職し社会人入学しました。しかし、交通事故の怪我が原因で中途退学し、療養しました。
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="timeline_item">
+                            <div class="time_date">
+                                <p class="time">2017</p>
+                                <p class="flag">再び介護の道へ</p>
+                            </div>
+                            <div class="desc">
+                                <p>&emsp;怪我の完治後は再び介護施設へ就職。国家資格である介護福祉士の資格を取得しました。その後介護職として、様々な形態の施設、病院に勤務し経験を積みました。</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline_item">
+                            <div class="time_date">
+                                <p class="time">2025</p>
+                                <p class="flag">未経験職種への挑戦</p>
+                            </div>
+                            <div class="desc">
+                                <p>&emsp;介護の仕事はやりがいもあり楽しく働いていましたが、腰痛など身体への負担が年々大きくなってきました。この先長く働いていくことを考え、転職を決意。職業訓練へ通い始めました。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <footer>
+        <a href="about.html" id="page-top">TOP</a>
+        <p> &copy;Yui&#160;Fukushima</p>
+    </footer>
+
+
+
+</body>
+
+</html>
